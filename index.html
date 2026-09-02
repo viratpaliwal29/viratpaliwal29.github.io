@@ -19,7 +19,45 @@ nav{position:sticky;top:0;z-index:20;background:rgba(8,17,31,.94);border-bottom:
 .nav{height:70px;display:flex;align-items:center;justify-content:space-between}
 .logo{font-size:21px;font-weight:800}.logo span,.blue{color:#4ea1ff}
 .links{display:flex;gap:25px;color:#aebbd0;font-size:14px}.links a:hover{color:#fff}
-.hero{padding:100px 0 85px;background:radial-gradient(circle at 80% 15%,rgba(45,125,255,.22),transparent 34%)}
+.hero{padding:100px 0 85px;background:radial-gradient(circle at 80% 15%,rgba(45,125,255,.22),transparent 34%)} 
+  .hero-content{
+    display:grid;
+    grid-template-columns:1.4fr .6fr;
+    align-items:center;
+    gap:50px;
+}
+
+.profile-photo{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #4ea1ff;
+    display:block;
+    margin:auto;
+    box-shadow:0 0 35px rgba(78,161,255,.25);
+}
+
+@media(max-width:760px){
+    .hero-content{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-text{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .profile-photo{
+        width:220px;
+        height:220px;
+    }
+}
 .badge{display:inline-block;padding:7px 13px;border:1px solid #315a87;border-radius:999px;background:#0e2037;color:#75b8ff;font-size:13px;margin-bottom:20px}
 h1{font-size:clamp(45px,7vw,78px);line-height:1.04;letter-spacing:-2px}
 .hero h1 span{color:#4ea1ff}
@@ -54,17 +92,36 @@ footer{text-align:center;padding:28px;color:#71839c;font-size:13px}
 </div>
 </div></nav>
 
-<section class="hero" id="home"><div class="container">
+<section class="hero" id="home">
+<div class="container hero-content">
+
+<div>
 <div class="badge">QA Engineer • Manual & Automation Testing</div>
+
 <h1>Virat <span>Paliwal</span></h1>
-<p class="hero-text">QA Engineer with 1.9 years of experience in manual and automation testing, focused on test execution, defect tracking, regression coverage and reliable software quality.</p>
+
+<p class="hero-text">
+QA Engineer with 1.9 years of experience in manual and automation testing,
+focused on test execution, defect tracking, regression coverage and reliable
+software quality.
+</p>
+
 <div class="buttons">
 <a class="btn primary" href="#projects">Explore Projects</a>
 <a class="btn secondary" href="resume.pdf" target="_blank">View Resume</a>
 <a class="btn secondary" href="https://www.linkedin.com/in/virat-qa/" target="_blank">LinkedIn</a>
 <a class="btn secondary" href="https://github.com/viratpaliwal29" target="_blank">GitHub</a>
 </div>
-</div></section>
+</div>
+
+<div>
+<img src="virat-paliwal.png"
+     alt="Virat Paliwal - QA Engineer"
+     class="profile-photo">
+</div>
+
+</div>
+</section>
 
 <section id="about"><div class="container">
 <h2 class="title">About Me</h2><p class="sub">Quality-focused testing with manual and automation experience.</p>
